@@ -2478,6 +2478,13 @@ var buildfire = {
             else
                 return root + "?dld=" + JSON.stringify(obj);
         }
+    },
+    shortLinks : {
+        generate: function (params, callback) {
+            var p = new Packet(null, 'shortLinks.generate', params);
+            buildfire._sendPacket(p, callback);
+        }
+
     }
     /// ref: https://github.com/BuildFire/sdk/wiki/Spinners
     , spinner: {
