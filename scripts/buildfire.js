@@ -2477,17 +2477,14 @@ var buildfire = {
                 return root;
             else
                 return root + "?dld=" + JSON.stringify(obj);
-        }
-    },
-    shortLinks : {
-        generate: function (params, callback) {
+        },
+        generateUrl: function (params, callback) {
             var p = new Packet(null, 'shortLinks.generate', params);
             buildfire._sendPacket(p, callback);
         }
-
-    }
+    },
     /// ref: https://github.com/BuildFire/sdk/wiki/Spinners
-    , spinner: {
+     spinner: {
         show: function () {
             buildfire._sendPacket(new Packet(null, 'spinner.show'));
         }
